@@ -28,4 +28,4 @@ def download_sensor_list(country_abb: str) -> str:
         for sensor in data["data"]:
             s = Sensor(*sensor)
             sl.add_sensor(s)
-    return sl.to_csv()
+    return sl.to_csv(f"sensor_list_{country_abb}_{sl.crawl_time}.csv")

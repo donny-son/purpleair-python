@@ -45,10 +45,10 @@ class SensorList:
     def to_dataframe(self):
         return pd.DataFrame([sensor.__dict__ for sensor in self.sensors])
 
-    def to_csv(self):
+    def to_csv(self, filename: str = "sensor_list_{self.crawl_time}.csv"):
         download_dir = os.path.join(os.getcwd(), ".downloads")
         os.makedirs(download_dir, exist_ok=True)
-        location = os.path.join(download_dir, f"sensor_list_{self.crawl_time}.csv")
+        location = os.path.join(download_dir, filename)
         df = self.to_dataframe()
         try:
             df.to_csv(location, index=False)
