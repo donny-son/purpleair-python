@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "purpleair"
+version = "0.1.0"
+description = "Fetch Data From PurpleAir"
+authors = ["Dongook Son <60206749+donny-son@users.noreply.github.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+httpx = "^0.23.0"
+python-dotenv = "^0.21.0"
+pandas = "^1.5.1"
+
+[tool.poetry.dev-dependencies]
+debugpy = "^1.6.3"
+jedi = "^0.18.1"
+pytest = "^7.2.0"
+pre-commit = "^2.20.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^22.10.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
