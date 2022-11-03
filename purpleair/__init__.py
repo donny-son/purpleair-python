@@ -8,6 +8,17 @@ from dotenv import load_dotenv
 load_dotenv()
 BASE_URL = "https://api.purpleair.com/v1"
 API_KEY = os.getenv("PURPLE_AIR_READ_KEY")
+BBOX = {
+    "kr": {
+        "name": "South Korea",
+        "bbox": {
+            "nwlng": 124.354847,
+            "nwlat": 38.623477,
+            "selng": 132.1467806,
+            "selat": 32.9104556,
+        },
+    }
+}
 
 
 @dataclass
